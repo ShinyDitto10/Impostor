@@ -3,15 +3,15 @@ Juego del impostor programado en C. Muy en pañales todavía.
 
 ### Cómo usar el programa.
 
-1. Descarga el zip y extráelo.
-2. Abre la carpeta impostor.
-3. Dentro de la carpeta "impostor", escribe cmd en la barra de arriba del explorador de archivos y pulsa enter.
+1. Descarga "impostor.exe" y "palabras_impostor.txt" y mételos en una misma carpeta.
+2. Abre la carpeta.
+3. Dentro de la carpeta, escribe `cmd` en la barra de arriba del explorador de archivos y pulsa `enter`.
 4. Se abrirá la terminal.
-5. Usa el comando .\impostor.exe para abrir el programa.
+5. Usa el comando `.\impostor.exe` para abrir el programa.
 
 ### Cómo añadir palabras nuevas.
 
-El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Su formato es el siguiente:
+El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Para añadir más palabras, edita el archivo y guarda los cambios con "Commit Changes". El formato del archivo es el siguiente:
 
  Número
 
