@@ -9,9 +9,9 @@ Juego del impostor programado en C. Muy en pañales todavía.
 4. Se abrirá la terminal.
 5. Usa el comando `.\impostor.exe` para abrir el programa.
 
-### Cómo añadir palabras nuevas.
+### Cómo añadir tus propias palabras.
 
-El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Para añadir más palabras, edita el archivo y guarda los cambios con "Commit Changes". El formato del archivo es el siguiente:
+El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Para añadir más palabras, edita el archivo. El formato del archivo es el siguiente:
 
  Número
 
@@ -25,5 +25,7 @@ El archivo "palabras_impostor.txt" contiene las palabras que puede usar el progr
  Pista                                                                                                
  Pista                                                                                                        
 
-El número de arriba indica el número total de palabras en el archivo (si añades más, no te olvides de cambiarlo). Si no se te ocurren 3
-pistas, escribe la misma 3 veces.
+- El número de arriba indica el número total de palabras en el archivo (si añades más, no te olvides de cambiarlo).
+- Todas las palabras tienen que tener 3 pistas. Si no se te ocurren 3 pistas, escribe la misma 3 veces.
+- Cada palabra no puede tener más de 29 cararcteres.
+- El número máximo de palabras es 99999.
