@@ -1,7 +1,7 @@
 # Impostor
 Juego del impostor programado en C. Muy en pañales todavía.
 
-###Cómo usar el programa.
+### Cómo usar el programa.
 
 1. Descarga el zip y extráelo.
 2. Abre la carpeta impostor.
@@ -9,8 +9,10 @@ Juego del impostor programado en C. Muy en pañales todavía.
 4. Se abrirá la terminal.
 5. Usa el comando .\impostor.exe para abrir el programa.
 
-###Cómo añadir palabras nuevas
-El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Su formato es el siguiente.
+### Cómo añadir palabras nuevas.
+
+El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Su formato es el siguiente:
+
 Número
 
 Palabra
