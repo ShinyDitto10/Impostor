@@ -3,9 +3,10 @@
 #include <time.h>
 #include <string.h>
 
-int reset(int c){
+void reset(void){
     //Limpia el buffer de entrada para que fgets() funcione bien (sigue habiendo
     //algún bug pero no sé como arreglarlo)
+    int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
@@ -70,8 +71,7 @@ int main(){
         return 1;
     }
     
-    int a;
-    reset(a);
+    reset();
 
     //Seleccionar el número de impostores
     char impostores[3];
@@ -99,19 +99,19 @@ int main(){
     for(int k = 0; k < numJugadores; k++){
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, pulsa enter para ver tu palabra\n", k + 1);
         fgets(placeHold, 2, stdin);
-        reset(a);
+        reset();
         placeHold[0] = '\0';
         placeHold[1] = '\0';
         if(k == impostoresJ[0] || k == impostoresJ[1] || k == impostoresJ[2] || k == impostoresJ[3]){
-            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, eres un impostor, tu pista es %s\n", k + 1, pistaGameplay);
+            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, eres un IMPOSTOR, tu pista es %s\n", k + 1, pistaGameplay);
         } else {
             printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, la palabra es %s\n", k + 1, palabraGameplay);
         }
         printf("Presiona enter 1 VEZ para continuar, jugador %d\n", k + 1);
-        reset(a);
+        reset();
     }
 
-    reset(a);
+    reset();
 
     printf("\nAdios!");
     return 0;
