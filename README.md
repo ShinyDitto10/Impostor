@@ -13,17 +13,17 @@ Juego del impostor programado en C. Muy en pañales todavía.
 
 El archivo "palabras_impostor.txt" contiene las palabras que puede usar el programa. Su formato es el siguiente:
 
-Número
+ Número
 
-Palabra
-Pista
-Pista
-Pista
+ Palabra                                                                     
+ Pista                                                                                                  
+ Pista                                                                     
+ Pista                                                                    
 
-Palabra
-Pista
-Pista
-Pista
+ Palabra                                                                                          
+ Pista                                                                     
+ Pista                                                                                                
+ Pista                                                                                                        
 
 El número de arriba indica el número total de palabras en el archivo (si añades más, no te olvides de cambiarlo). Si no se te ocurren 3
 pistas, escribe la misma 3 veces.
