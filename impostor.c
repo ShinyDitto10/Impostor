@@ -10,6 +10,13 @@ void reset(void){
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
+void clear(void){
+    //Imprime montones de saltos de línea para limpiar la pantalla
+    for(int s = 0; s < 100; s++){
+        printf("\n");
+    }
+}
+
 int main(){
 
     srand(time(NULL));
@@ -97,20 +104,36 @@ int main(){
     //Gameplay
     char placeHold[3];
     for(int k = 0; k < numJugadores; k++){
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, pulsa enter para ver tu palabra\n", k + 1);
+        clear();
+        printf("Jugador %d, pulsa enter para ver tu palabra\n", k + 1);
         fgets(placeHold, 2, stdin);
         reset();
         placeHold[0] = '\0';
         placeHold[1] = '\0';
+        clear();
         if(k == impostoresJ[0] || k == impostoresJ[1] || k == impostoresJ[2] || k == impostoresJ[3]){
-            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, eres un IMPOSTOR, tu pista es %s\n", k + 1, pistaGameplay);
+            printf("Jugador %d, eres un IMPOSTOR, tu pista es %s\n", k + 1, pistaGameplay);
         } else {
-            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJugador %d, la palabra es %s\n", k + 1, palabraGameplay);
+            printf("Jugador %d, la palabra es %s\n", k + 1, palabraGameplay);
         }
         printf("Presiona enter 1 VEZ para continuar, jugador %d\n", k + 1);
         reset();
     }
-
+    int jugadorComienza = rand() % numJugadores;
+    clear();
+    printf("Empieza el jugador %d\n", jugadorComienza + 1);
+    printf("Pulsa enter para revelar la palabra y a los impostores\n");
+    reset();
+    clear();
+    printf("La palabra era %s\n\n", palabraGameplay);
+    if (numImpostores == 1){
+        printf("El impostor era el jugador %d\n", impostoresJ[0] + 1);
+    } else {
+        printf("Los impostores eran:\n");
+        for(int l = 0; l < numImpostores; l++){
+            printf("Jugador %d\n", impostoresJ[l] + 1);
+        }
+    }
     reset();
 
     printf("\nAdios!");
