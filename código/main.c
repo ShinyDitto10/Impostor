@@ -5,8 +5,12 @@
 
 int main() {
 
-    abrirPalabrasTXT();
-    comprNumPalabrasArchivo();
+    if(abrirPalabrasTXT() == 1){
+        return 1;
+    }
+    if(comprNumPalabrasArchivo() == 1){
+        return 1;
+    }
     int m = 4;
     do{
     mostrarMenuPrincipal();
@@ -43,7 +47,7 @@ int main() {
                  } while(a == 1);
                  break;
               case 0:
-                 printf("Inserta un numero valido");
+                 printf("Inserta un numero valido\n\n");
                  break;        
            }
            } while (b != 5);
@@ -52,14 +56,14 @@ int main() {
         case 2:
            crearPalabraGameplay();
            crearPistaGameplay();
-           if(cerrarPalabrasTXT() == 1){
-            return 1;
-           }
            crearImpostores();
            mostrarPalabras();
            seleccionarPrimerJugador();
            limpiarBufferStdin();
            revelarImpostores();
+           cerrarPalabrasTXT();
+           abrirPalabrasTXT();
+           comprNumPalabrasArchivo();
            break;
         case 3:
            mostrarCreditos();
@@ -67,11 +71,12 @@ int main() {
         case 4:
            break;
         default:
-           printf("Inserta un numero valido");
+           printf("Inserta un numero valido\n\n");
            break;
         }
     } while (m != 4);
 
+    cerrarPalabrasTXT();
     printf("Adios! :)\n");
     return 0;
 }
